@@ -21,7 +21,14 @@ const project = (name) => {
     display.innerHTML = '';
     for (let i = 0; i < cards.length; i++) {
       const todoDisplay = document.createElement('div');
-      todoDisplay.innerText = cards[i].getName();
+      const todoText = document.createElement('div');
+      todoText.innerText = cards[i].getName();
+      const todoDone = document.createElement('div');
+      todoDone.innerText = cards[i].getDone() ? '☑' : '[ ]';
+      todoDisplay.appendChild(todoText);
+      todoDisplay.appendChild(todoDone);
+      todoDisplay.classList.toggle('project-line');
+      todoDisplay.classList.toggle('todo-line');
       display.appendChild(todoDisplay);
     }
   };

@@ -46,7 +46,7 @@ body {
     gap: 10px;
 }
 
-.projects {
+.projects, .cards {
     grid-area: projects;
     background-color: lightblue;
     display: flex;
@@ -79,8 +79,16 @@ body {
     justify-content: space-between;
 }
 
+.todo-line {
+    background-color: lightblue;
+}
+
 .project-line:hover {
     background-color: white;
+}
+
+.todo-line:hover {
+    background-color: lightgray;
 }
 
 .selected {
