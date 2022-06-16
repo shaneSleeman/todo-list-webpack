@@ -1,8 +1,9 @@
+/* eslint-disable no-loop-func */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-plusplus */
 /* eslint-disable import/extensions */
 /* eslint-disable no-unused-vars */
-import card from './card.js';
+import { card } from './card.js';
 
 const project = (name) => {
   let cards = [];
@@ -59,8 +60,8 @@ const project = (name) => {
       // eslint-disable-next-line no-loop-func
       addCards.addEventListener('click', () => {
         const cardName = prompt('Enter a task:');
-        const entered = card(cardName, false);
-        cards.push(entered);
+        const addedCard = card(cardName, false);
+        cards.push(addedCard);
         // eslint-disable-next-line no-undef
         displayCards(display);
       });
