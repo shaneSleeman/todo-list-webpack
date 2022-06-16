@@ -1,6 +1,6 @@
 # todo-list-webpack
 
-[Live Demo] (https://shanesleeman.github.io/todo-list-webpack/)
+[Live Demo](https://shanesleeman.github.io/todo-list-webpack/)
 
 A simple Todo List app, to demonstrate Webpack proficiency.
 
