@@ -1,5 +1,6 @@
 import './style.css';
-import {addProject, removeProject, displayProjects} from './projects.js';
+import {addProject, removeProject, displayProjects, getProject} from './projects.js';
+import {card} from './card.js';
 /*
 const body = document.querySelector("body");
 
@@ -20,7 +21,6 @@ content.classList.toggle("content");
 
 const projects = document.createElement("div");
 projects.classList.toggle("projects");
-projects.innerText = ".";
 const cards = document.createElement("div");
 cards.classList.toggle("cards");
 cards.innerText = ".";
@@ -37,4 +37,18 @@ body.appendChild(footer);
 
 addProject("test");
 addProject("test2");
-displayProjects(projects);
+
+let card1 = card("a", "b", "c", "d", "e");
+let card2 = card("b", "b", "c", "d", "e");
+let card3 = card("c", "b", "c", "d", "e");
+let card4 = card("d", "b", "c", "d", "e");
+let card5 = card("e", "b", "c", "d", "e");
+getProject(0).addCard(card1);
+getProject(0).addCard(card2);
+getProject(0).addCard(card3);
+getProject(1).addCard(card4);
+getProject(1).addCard(card5);
+displayProjects(projects, cards);
+getProject(0).displayCards(cards);
+
+export {cards};

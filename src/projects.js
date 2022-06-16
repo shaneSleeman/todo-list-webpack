@@ -10,13 +10,20 @@ function removeProject(project) {
 
 }
 
-function displayProjects(display) {
+function displayProjects(display, display2) {
     display.innerHTML = "";
     for(let i = 0; i < projects.length; i++) {
         const projectDisplay = document.createElement("div");
         projectDisplay.innerText = projects[i].getName();
+        projectDisplay.addEventListener("click", () => {
+            projects[i].displayCards(display2);
+        });
         display.appendChild(projectDisplay);
     }
 }
 
-export {addProject, removeProject, displayProjects};
+function getProject(n) {
+    return projects[n];
+}
+
+export {addProject, removeProject, displayProjects, getProject};

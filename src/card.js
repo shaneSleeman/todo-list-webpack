@@ -1,5 +1,6 @@
 const card = (name, description, date, priority, done) => {
-    return(name, descrion, date, priority, done);
+    const getName = () => name;
+    return{getName};
 }
 
-export default card;
+export {card};
