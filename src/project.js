@@ -13,5 +13,7 @@ const project = (name) => {
 
     const getCards = () => cards;
 
-    return(addCard, removeCard, getCards);
+    return(name, addCard, removeCard, getCards);
 }
+
+export default project;

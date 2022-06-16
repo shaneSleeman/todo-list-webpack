@@ -1,4 +1,5 @@
 import './style.css';
+import {addProject, removeProject, displayProjects} from './projects.js';
 /*
 const body = document.querySelector("body");
 
@@ -10,7 +11,7 @@ body.appendChild(title);
 
 const body = document.querySelector("body");
 
-const header = document.querySelector("div");
+const header = document.createElement("div");
 header.classList.toggle("header");
 header.innerText = "Todo List!";
 
