@@ -29,8 +29,10 @@ const project = (name) => {
       const todoDelete = document.createElement('div');
       todoDelete.innerText = '⨂';
       todoDelete.addEventListener('click', () => {
-        removeCard(i);
-        displayCards(display);
+        setTimeout(() => {
+          removeCard(i);
+          displayCards(display);
+        }, 5);
       });
       const todoDone = document.createElement('div');
       if (cards[i].getDone()) {
