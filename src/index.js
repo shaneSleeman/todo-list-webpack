@@ -35,14 +35,14 @@ body.appendChild(header);
 body.appendChild(content);
 body.appendChild(footer);
 
-addProject("test");
-addProject("test2");
+addProject("Inbox");
+addProject("Today");
 
-let card1 = card("a", "b", "c", "d", "e");
-let card2 = card("b", "b", "c", "d", "e");
-let card3 = card("c", "b", "c", "d", "e");
-let card4 = card("d", "b", "c", "d", "e");
-let card5 = card("e", "b", "c", "d", "e");
+let card1 = card("a", "b", "c");
+let card2 = card("b", "b", "c");
+let card3 = card("c", "b", "c");
+let card4 = card("d", "b", "c");
+let card5 = card("e", "b", "c");
 getProject(0).addCard(card1);
 getProject(0).addCard(card2);
 getProject(0).addCard(card3);
