@@ -19,6 +19,10 @@ body {
     border-radius: 20px;
 }
 
+.header, .footer, .projects, .cards, .project-line {
+    box-shadow: 5px 5px 5px lightgrey;
+}
+
 .header {
     background-color:cadetblue;
     color: white;
