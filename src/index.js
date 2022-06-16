@@ -1,20 +1,12 @@
 import './style.css';
 import {addProject, removeProject, displayProjects, getProject} from './projects.js';
 import {card} from './card.js';
-/*
-const body = document.querySelector("body");
-
-const title = document.createElement("h1");
-title.innerText = "Test";
-
-body.appendChild(title);
-*/
 
 const body = document.querySelector("body");
 
 const header = document.createElement("div");
 header.classList.toggle("header");
-header.innerText = "Todo List!";
+header.innerText = "Todo List ☑";
 
 const content = document.createElement("div");
 content.classList.toggle("content");
@@ -29,7 +21,7 @@ content.appendChild(cards);
 
 const footer = document.createElement("div");
 footer.classList.toggle("footer");
-footer.innerText = "(c) Shane Sleeman 2022";
+footer.innerText = "© Shane Sleeman 2022";
 
 body.appendChild(header);
 body.appendChild(content);

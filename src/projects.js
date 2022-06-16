@@ -18,6 +18,10 @@ function displayProjects(display, display2) {
     for(let i = 0; i < projects.length; i++) {
         const projectDisplay = document.createElement("div");
         projectDisplay.classList.toggle('project-line');
+        projectDisplay.classList.remove("selected");
+        if(i == selected) {
+            projectDisplay.classList.add("selected");
+        }
         projectDisplay.innerText = projects[i].getName();
         const projectRemove = document.createElement("div");
         projectRemove.innerText = "⨂";
@@ -28,7 +32,7 @@ function displayProjects(display, display2) {
         projectDisplay.appendChild(projectRemove);
         projectDisplay.addEventListener("click", () => {
             selected = i;
-            projectDisplay.classList.toggle(".selected");
+            displayProjects(display, display2);
             projects[i].displayCards(display2);
         });
         display.appendChild(projectDisplay);

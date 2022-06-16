@@ -5,21 +5,36 @@
 
 body {
     font-family: 'Roboto';
-    margin: 0;
-    padding: 0;
+    margin: 0px;
     display: flex;
     flex-direction: column;
     height: 100vh;
     width: 100vw;
     gap: 10px;
+    border: 0px;
 }
 
 .header, .footer {
     height: 75px;
+    border-radius: 20px;
+}
+
+.header {
+    background-color:cadetblue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
 }
 
 .footer {
-    background-color: lightgray;
+    height: 40px;
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: darkgray;
 }
 
 .content {
@@ -28,6 +43,7 @@ body {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 3fr;
     grid-template-areas: "projects cards";
+    gap: 10px;
 }
 
 .projects {
@@ -68,5 +84,10 @@ body {
 }
 
 .selected {
-    background-color: white;
+    background-color: lightgray;
+}
+
+.cards {
+    background-color: aliceblue;
+    border-radius: 20px;
 }
