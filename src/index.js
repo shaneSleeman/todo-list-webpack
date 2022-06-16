@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable import/extensions */
 import './style.css';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 import {
   addProject, removeProject, displayProjects, getProject,
 } from './projects.js';

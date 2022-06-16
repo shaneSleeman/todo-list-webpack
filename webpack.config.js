@@ -12,7 +12,8 @@ module.exports = {
   devtool: 'inline-source-map',
   plugins: [
     new HtmlWebpackPlugin({
-        title: 'Todo List',
+      title: 'Todo List',
+      favicon: './src/icon.png',
     }),
   ],
   output: {
@@ -22,14 +23,18 @@ module.exports = {
   },
   module: {
     rules: [
-        {
-            test: /\.css$/i,
-            use: ['style-loader', 'css-loader'],
-        },
-        {
-            test: /\.ttf$/i,
-            type: 'asset/resource',
-        }
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.ttf$/i,
+        type: 'asset/resource',
+      },
     ],
   },
 };
