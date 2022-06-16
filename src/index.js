@@ -35,11 +35,12 @@ body.appendChild(footer);
 addProject('Inbox');
 addProject('Today');
 
-const card1 = card('a', 'b', 'c');
-const card2 = card('b', 'b', 'c');
-const card3 = card('c', 'b', 'c');
-const card4 = card('d', 'b', 'c');
-const card5 = card('e', 'b', 'c');
+// Defaults
+const card1 = card('Complete homework', false);
+const card2 = card('Read emails', false);
+const card3 = card('Exercise', false);
+const card4 = card('Do washing', false);
+const card5 = card('Appointment', false);
 getProject(0).addCard(card1);
 getProject(0).addCard(card2);
 getProject(0).addCard(card3);
