@@ -34,3 +34,7 @@ footer.innerText = "(c) Shane Sleeman 2022";
 body.appendChild(header);
 body.appendChild(content);
 body.appendChild(footer);
+
+addProject("test");
+addProject("test2");
+displayProjects(projects);

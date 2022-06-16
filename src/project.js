@@ -3,6 +3,8 @@ import card from './card.js';
 const project = (name) => {
     let cards = [];
 
+    const getName = () => name;
+
     const addCard = (todo) => {
         cards.push(todo);
     }
@@ -13,7 +15,7 @@ const project = (name) => {
 
     const getCards = () => cards;
 
-    return(name, addCard, removeCard, getCards);
+    return{getName, addCard, removeCard, getCards};
 }
 
 export default project;

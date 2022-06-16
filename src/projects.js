@@ -14,8 +14,8 @@ function displayProjects(display) {
     display.innerHTML = "";
     for(let i = 0; i < projects.length; i++) {
         const projectDisplay = document.createElement("div");
-        projectDisplay.innerText = projects[i].name;
-        display.appendChild(project);
+        projectDisplay.innerText = projects[i].getName();
+        display.appendChild(projectDisplay);
     }
 }
 
