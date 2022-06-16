@@ -5,7 +5,7 @@
 import card from './card.js';
 
 const project = (name) => {
-  const cards = [];
+  let cards = [];
 
   const getName = () => name;
 
@@ -13,9 +13,11 @@ const project = (name) => {
     cards.push(todo);
   };
 
-  const removeCard = (todo) => {
-
-  };
+  function removeCard(i) {
+    const half1 = cards.slice(0, i);
+    const half2 = cards.slice(i + 1, cards.length);
+    cards = half1.concat(half2);
+  }
 
   const displayCards = (display) => {
     display.innerHTML = '';
@@ -25,6 +27,10 @@ const project = (name) => {
       todoText.innerText = cards[i].getName();
       const todoDelete = document.createElement('div');
       todoDelete.innerText = '⨂';
+      todoDelete.addEventListener('click', () => {
+        removeCard(i);
+        displayCards(display);
+      });
       const todoDone = document.createElement('div');
       if (cards[i].getDone()) {
         todoDone.innerText = '✓';
