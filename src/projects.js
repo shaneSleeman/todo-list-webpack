@@ -48,7 +48,10 @@ function displayProjects(display, display2) {
     addProject.classList.toggle('project-line');
     addProject.innerText = 'Add Project...';
     addProject.addEventListener('click', () => {
-      const projectName = prompt('Enter a project name:');
+      let projectName = prompt('Enter a project name:');
+      if (projectName.length > 18) {
+        projectName = projectName.substring(0, 18);
+      }
       projects.push(project(projectName));
       displayProjects(display, display2);
     });

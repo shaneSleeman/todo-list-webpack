@@ -59,7 +59,10 @@ const project = (name) => {
       addCards.innerText = 'Add Todo Item...';
       // eslint-disable-next-line no-loop-func
       addCards.addEventListener('click', () => {
-        const cardName = prompt('Enter a task:');
+        let cardName = prompt('Enter a task:');
+        if (cardName.length > 30) {
+          cardName = cardName.substring(0, 30);
+        }
         const addedCard = card(cardName, false);
         cards.push(addedCard);
         // eslint-disable-next-line no-undef
