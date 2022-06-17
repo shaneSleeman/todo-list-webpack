@@ -4,4 +4,7 @@
 
 A simple Todo List app, to demonstrate Webpack proficiency.
 
-This project also demonstrates some intermediate CSS skills (such as Grid), as well as the use of Javascript factories and ES6 modules.
+This project demonstrates:
+- Intermediate CSS skills (such as Grid)
+- Javascript factories and ES6 modules
+- Linting
