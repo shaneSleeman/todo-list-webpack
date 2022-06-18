@@ -5,6 +5,7 @@
 A simple Todo List app, to demonstrate Webpack proficiency.
 
 This project demonstrates:
+- Webpack bundling
 - Intermediate CSS skills (such as Grid)
 - Javascript factories and ES6 modules
 - Linting
